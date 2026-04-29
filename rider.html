@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rider Técnico | Banda Nação 80</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topo">
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="shows.html">Shows</a>
+      <a href="musicas.html">Músicas</a>
+      <a href="galeria.html">Galeria</a>
+      <a class="ativo" href="rider.html">Rider Técnico</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+
+    <div class="marca">BANDA NAÇÃO 80</div>
+  </header>
+
+  <main>
+    <section class="pagina-interna pagina-rider">
+      <div class="pagina-cabecalho">
+        <h1>Rider Técnico</h1>
+        <p>Mapas de ligação e descrição dos equipamentos fornecidos pela Banda Nação 80.</p>
+      </div>
+
+      <div class="rider-layout">
+        <div class="rider-col-imagens">
+          <div class="rider-card">
+            <h2>Mapa de Ligação 1</h2>
+            <p class="rider-obs">Clique na imagem para ampliar.</p>
+            <button class="rider-imagem-box rider-botao-imagem" type="button" onclick="abrirFoto('assets/rider-tecnico-1.png')">
+              <img src="assets/rider-tecnico-1.png" alt="Rider técnico Banda Nação 80 - configuração 1" />
+            </button>
+          </div>
+
+          <div class="rider-card">
+            <h2>Mapa de Ligação 2</h2>
+            <p class="rider-obs">Clique na imagem para ampliar.</p>
+            <button class="rider-imagem-box rider-botao-imagem" type="button" onclick="abrirFoto('assets/rider-tecnico-2.png')">
+              <img src="assets/rider-tecnico-2.png" alt="Rider técnico Banda Nação 80 - configuração 2" />
+            </button>
+          </div>
+        </div>
+
+        <div class="rider-col-tabela">
+          <div class="rider-card rider-card-tabela">
+            <h2>Descrição dos Equipamentos</h2>
+            <p class="rider-obs">Proposta nº 02</p>
+
+            <div class="tabela-rider-wrap">
+              <table class="tabela-rider">
+                <tbody>
+                  <tr class="secao"><th colspan="2">Bateria</th></tr>
+                  <tr><td>Instrumento</td><td>Bateria eletrônica ROLAND completa</td></tr>
+                  <tr><td>Saída</td><td>DI Stereo conectado à mesa digital</td></tr>
+                  <tr><td>Retorno</td><td>Fone de ouvido com "Power Click"</td></tr>
+
+                  <tr class="secao"><th colspan="2">VS (Clique)</th></tr>
+                  <tr><td>Instrumento</td><td>CDJ 350</td></tr>
+                  <tr><td>Saída</td><td>DI Stereo conectado à mesa digital</td></tr>
+
+                  <tr class="secao"><th colspan="2">Voz Principal</th></tr>
+                  <tr><td>Instrumento</td><td>Microfone SM 58 Beta e estante de microfone</td></tr>
+                  <tr><td>Saída</td><td>Pedaleira Live Voice conectada à mesa via cabo balanceado</td></tr>
+                  <tr><td>Retorno</td><td>Fone de ouvido com "Power Click"</td></tr>
+
+                  <tr class="secao"><th colspan="2">Backing (2ª voz)</th></tr>
+                  <tr><td>Instrumento</td><td>Microfone SM 58 Beta e estante de microfone</td></tr>
+                  <tr><td>Saída</td><td>Cabo balanceado</td></tr>
+                  <tr><td>Retorno</td><td>Fone de ouvido com "Power Click"</td></tr>
+
+                  <tr class="secao"><th colspan="2">Baixo</th></tr>
+                  <tr><td>Instrumento</td><td>Baixo Fender Jazz Bass</td></tr>
+                  <tr><td>Saída</td><td>Pedaleira BOSS GTB conectada à mesa via DI Mono</td></tr>
+                  <tr><td>Retorno</td><td>Fone de ouvido com "Power Click"</td></tr>
+
+                  <tr class="secao"><th colspan="2">Guitarra</th></tr>
+                  <tr><td>Instrumento</td><td>Guitarra Fender Deluxe / Ibanez</td></tr>
+                  <tr><td>Saída</td><td>Pedaleira HELIX FLOOR conectada à mesa via DI Mono</td></tr>
+                  <tr><td>Retorno</td><td>Fone de ouvido com "Power Click"</td></tr>
+
+                  <tr class="secao secao-pa"><th colspan="2">PA (Sonorização)</th></tr>
+                  <tr><td>Mesa de som</td><td>Mesa Digital UI24r - 24 canais</td></tr>
+                  <tr><td>PA</td><td>2 caixas ativas Electro Voice LX200 15P - 1200W - SPL máximo: 132db</td></tr>
+                  <tr><td>Geral</td><td>Cabos, stands de microfone e power click</td></tr>
+                  <tr><td>Opcional</td><td>Refletores de LED RGB / unidades / mesa controladora</td></tr>
+                  <tr><td>Não incluso</td><td>Palco</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal-foto" id="modalFoto" onclick="fecharFotoFora(event)">
+      <button class="fechar-modal" type="button" onclick="fecharFoto()">×</button>
+      <img id="fotoModal" src="" alt="Rider técnico ampliado" />
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Banda Nação 80 - Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
