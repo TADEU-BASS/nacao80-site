@@ -2,7 +2,10 @@ function abrirFoto(caminho) {
   const modal = document.getElementById("modalFoto");
   const foto = document.getElementById("fotoModal");
 
-  if (!modal || !foto) return;
+  if (!modal || !foto) {
+    console.error("Modal de foto não encontrado.");
+    return;
+  }
 
   foto.src = caminho;
   modal.classList.add("ativo");
@@ -24,12 +27,6 @@ function fecharFotoFora(event) {
   if (event.target && event.target.id === "modalFoto") {
     fecharFoto();
   }
-}
-
-);
-  }, 150);
-}
-
 }
 
 document.addEventListener("keydown", (event) => {
