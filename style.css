@@ -2838,17 +2838,20 @@ footer {
   display: block;
 }
 
-@media (max-width: 700px) {
-  .video-youtube-card {
-    padding: 20px;
-  }
+/* Botão Instagram */
+.btn-instagram {
+  display: inline-block;
+  border: 2px solid #ff20cb;
+  box-shadow: 0 0 18px rgba(255,32,203,0.42);
+  color: #fff;
+  background: linear-gradient(135deg, rgba(255,32,203,0.18), rgba(255,242,0,0.10));
 }
 
+.btn-instagram:hover {
+  box-shadow: 0 0 26px rgba(255,32,203,0.62);
+}
 
-/* =========================
-   CORREÇÃO MODAL FOTOS - GITHUB PAGES
-========================= */
-
+/* Correção modal fotos */
 .modal-foto {
   position: fixed;
   inset: 0;
@@ -2901,4 +2904,10 @@ footer {
 
 .modal-aberto {
   overflow: hidden;
+}
+
+@media (max-width: 700px) {
+  .video-youtube-card {
+    padding: 20px;
+  }
 }
