@@ -2911,3 +2911,133 @@ footer {
     padding: 20px;
   }
 }
+
+
+/* =========================
+   CORREÇÃO FINAL - VÍDEOS, INSTAGRAM E MODAL
+========================= */
+
+.pagina-videos {
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.92), rgba(0,0,0,0.78)),
+    url('assets/foto-banda-home.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.video-youtube-card {
+  max-width: 980px;
+  background: linear-gradient(135deg, rgba(0,0,0,0.88), rgba(0,0,0,0.70));
+  border: 1px solid rgba(0,234,255,0.58);
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow:
+    0 0 26px rgba(0,234,255,0.18),
+    inset 0 0 20px rgba(255,255,255,0.02);
+}
+
+.video-youtube-card h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  color: #fff200;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.youtube-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,32,203,0.52);
+  background: #000;
+  box-shadow: 0 0 22px rgba(255,32,203,0.18);
+  margin-bottom: 24px;
+}
+
+.youtube-box iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.btn-instagram {
+  display: inline-block;
+  border: 2px solid #ff20cb;
+  box-shadow: 0 0 18px rgba(255,32,203,0.42);
+  color: #fff;
+  background: linear-gradient(135deg, rgba(255,32,203,0.18), rgba(255,242,0,0.10));
+}
+
+.btn-instagram:hover {
+  box-shadow: 0 0 26px rgba(255,32,203,0.62);
+}
+
+.modal-foto {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background: rgba(0,0,0,0.88);
+  backdrop-filter: blur(8px);
+}
+
+.modal-foto.ativo {
+  display: flex !important;
+}
+
+.modal-foto img {
+  max-width: min(94vw, 1100px);
+  max-height: 88vh;
+  object-fit: contain;
+  border-radius: 18px;
+  border: 2px solid rgba(255,32,203,0.68);
+  box-shadow:
+    0 0 34px rgba(255,32,203,0.35),
+    0 0 30px rgba(0,234,255,0.18);
+  background: #000;
+}
+
+.fechar-modal {
+  position: fixed;
+  top: 24px;
+  right: 32px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.85);
+  background: rgba(0,0,0,0.78);
+  color: #fff;
+  font-size: 2.4rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 100000;
+  box-shadow: 0 0 18px rgba(255,32,203,0.35);
+}
+
+.fechar-modal:hover {
+  color: #fff200;
+  border-color: #fff200;
+}
+
+.modal-aberto {
+  overflow: hidden;
+}
+
+.rider-botao-imagem {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .video-youtube-card {
+    padding: 20px;
+  }
+}
