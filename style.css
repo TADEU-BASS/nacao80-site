@@ -3195,3 +3195,98 @@ video {
     min-height: 210px !important;
   }
 }
+/* =========================================
+   GALERIA - CARDS DOS MÚSICOS TODO ESCUROS
+========================================= */
+
+.musicos-grid .card-musico-escuro {
+  position: relative;
+  height: 210px !important;
+  min-height: 210px !important;
+  background: linear-gradient(135deg, #050505, #111111) !important;
+  border: 1px solid rgba(0, 234, 255, 0.55) !important;
+  box-shadow: 0 0 18px rgba(0, 234, 255, 0.14) !important;
+  overflow: hidden;
+}
+
+/* Esconde a foto visualmente, mas mantém o card clicável */
+.musicos-grid .card-musico-escuro img {
+  opacity: 0 !important;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Remove o efeito antigo de sombra sobre a foto */
+.musicos-grid .card-musico-escuro::after {
+  content: none !important;
+}
+
+.legenda-musico {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 18px;
+}
+
+.legenda-musico strong {
+  font-family: 'Bebas Neue', sans-serif;
+  color: #ffffff;
+  font-size: clamp(1.8rem, 2vw, 2.5rem);
+  letter-spacing: 2px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.legenda-musico span {
+  position: static !important;
+  margin-top: 10px;
+  font-family: 'Bebas Neue', sans-serif;
+  color: #fff200 !important;
+  font-size: clamp(1.1rem, 1.4vw, 1.5rem) !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase;
+  text-shadow: none !important;
+  left: auto !important;
+  bottom: auto !important;
+}
+
+@media (max-width: 900px) {
+  .musicos-grid .card-musico-escuro {
+    height: 190px !important;
+    min-height: 190px !important;
+  }
+
+  .legenda-musico strong {
+    font-size: 1.55rem;
+  }
+
+  .legenda-musico span {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .musicos-grid .card-musico-escuro {
+    height: 180px !important;
+    min-height: 180px !important;
+  }
+
+  .legenda-musico {
+    padding: 14px;
+  }
+
+  .legenda-musico strong {
+    font-size: 1.35rem;
+  }
+
+  .legenda-musico span {
+    font-size: 0.95rem !important;
+  }
+}
