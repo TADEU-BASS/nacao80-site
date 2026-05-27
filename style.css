@@ -3041,3 +3041,157 @@ footer {
     padding: 20px;
   }
 }
+/* =====================================================
+   CORREÇÃO RESPONSIVA - NOTEBOOK / GALERIA / MENU
+   Banda Nação 80
+===================================================== */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+/* Evita que o topo corte em notebooks */
+.topo {
+  width: 100%;
+  max-width: 100%;
+  min-height: auto;
+}
+
+/* Ajuste para notebooks comuns, incluindo 1366px */
+@media (max-width: 1450px) {
+  .topo {
+    padding: 18px 28px 14px;
+    gap: 18px;
+    align-items: center;
+  }
+
+  .marca {
+    font-size: clamp(2rem, 3.2vw, 3.6rem);
+    letter-spacing: 2px;
+    white-space: normal;
+    text-align: right;
+    top: 0;
+    line-height: 1.05;
+  }
+
+  .menu {
+    gap: 18px;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+  }
+
+  .menu a {
+    font-size: 1.12rem;
+    letter-spacing: 3px;
+  }
+
+  .menu a.ativo {
+    padding-bottom: 8px;
+  }
+
+  .pagina-interna {
+    padding-top: 160px;
+  }
+}
+
+/* Quando a tela fica menor, o topo vira coluna */
+@media (max-width: 1100px) {
+  .topo {
+    position: relative;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 20px;
+  }
+
+  .marca {
+    text-align: center;
+    font-size: clamp(2.2rem, 6vw, 4rem);
+  }
+
+  .menu {
+    width: 100%;
+    justify-content: center;
+    gap: 14px 20px;
+  }
+
+  .menu a {
+    font-size: 1.05rem;
+    letter-spacing: 2px;
+  }
+
+  .pagina-interna {
+    padding: 45px 6% 70px;
+  }
+}
+
+/* Correção específica da página Galeria */
+.pagina-galeria {
+  width: 100%;
+  max-width: 100%;
+}
+
+.galeria-grid-padrao,
+.galeria-fotos-grid {
+  width: 100%;
+  max-width: 100%;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+  gap: 16px !important;
+}
+
+.galeria-card {
+  width: 100% !important;
+  height: 190px !important;
+  min-height: 190px !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+}
+
+.galeria-card img {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  display: block !important;
+}
+
+.galeria-card span {
+  font-size: 1rem !important;
+  letter-spacing: 1.5px !important;
+}
+
+/* Tablet */
+@media (max-width: 760px) {
+  .galeria-grid-padrao,
+  .galeria-fotos-grid {
+    grid-template-columns: repeat(2, minmax(130px, 1fr)) !important;
+  }
+
+  .galeria-card {
+    height: 175px !important;
+    min-height: 175px !important;
+  }
+}
+
+/* Celular */
+@media (max-width: 430px) {
+  .galeria-grid-padrao,
+  .galeria-fotos-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .galeria-card {
+    height: 210px !important;
+    min-height: 210px !important;
+  }
+}
